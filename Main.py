@@ -32,7 +32,7 @@ from bs4 import BeautifulSoup
 
 import openai
 
-openai.api_key = "API kEY openai"
+openai.api_key = "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"
 
  
 
@@ -428,21 +428,21 @@ def generateData(data):
 
   response = openai.Completion.create(
 
-      model="text-davinci-003",
+  model="text-davinci-003",
 
-      prompt=prmt,
+  prompt="Hello i want to make article with this title : \"why is my cholesterol so high\" and i have candidates of my h2 heading for my article. below is the list of heading:\n\nWhy Is My Cholesterol High?\nCauses of high cholesterol\nCauses of high cholesterol\nHigh cholesterol\nWhat causes high cholesterol?\nWhat causes high cholesterol?\nAbout high cholesterol\nWhat Is High Cholesterol?\nWhy should I lower my cholesterol?\nWhat should my cholesterol levels be?\nHow can I lower my cholesterol level?\nDiagnosing high cholesterol\nHigh cholesterol symptoms\nDiagnosis of High Cholesterol\nAbout cholesterol\nTreating high cholesterol\nPreventing high cholesterol\nLiving with high cholesterol\nWhat is cholesterol?\nComplications of high cholesterol\nWhat is cholesterol?\nHigh cholesterol treatment\nCan high cholesterol be prevented or avoided?\nHow to prevent high cholesterol\nTreatment for High Cholesterol\nSymptoms of high cholesterol\nGetting your cholesterol levels checked\nHow to lower cholesterol\nWays to Prevent High Cholesterol\nHow is high cholesterol diagnosed?\nSigns and Symptoms of High Cholesterol\nGetting a cholesterol test\nRisk factors for high cholesterol\nRecent guidelines for healthy cholesterol levels\nCholesterol Resources\nWhen should my cholesterol levels be tested?\nCholesterol-lowering medication\nLDL cholesterol, or “bad cholesterol”\nHDL cholesterol, or “good cholesterol”\nFamilial hypercholesterolaemia\nFamilial hypercholesterolaemia\nTriglycerides, a different type of lipid\nOmega-3 fatty acids\nA High-Sugar Diet\nLiver Problems\nMenopause\nToo Much Alcohol\nDiet\nDiet\nCauses\nThyroid Issues\nOther factors\nKidney Problems\nType 2 Diabetes\nQuestions to ask your doctor\nSmoking\nTake a look at your lifestyle\nStress\nMedications\nFrom Mayo Clinic to your inbox\nSitting a Lot\nMore health news + info\nExercise\nPregnancy\nSymptoms\nRisk factors\nSpeed Bump\nComplications\nA Word From Verywell\nPrevention\nLifestyle\nAdvertisement\nHelp us improve NHS inform\nUnderlying conditions\nWho should be tested?\nResults\nUnfiltered Coffee\nHeredity can play a role\nRelated\nSummary\nOverview\n\n\nAbout Us\nFeedback Alert Title\nMake the changes worth making\nRelated Articles\nResources\nContents\nContact Us\nGet Involved\nTakeaway\nSupport links\nOur Sites\n\nPrompt: please help determine between 3 to 6 headings that are the best for my article and sort them as an outline so they have a good flow. don't force it if only 3 headings are suitable for my article then it is better than 6 headings but some are not suitable. please don't add \" or quote on your answer and without number just raw text.\n\nOutline: \n\nWhat Is High Cholesterol?\nCauses of High Cholesterol\nWhat Causes High Cholesterol?\nHow Can I Lower My Cholesterol Level?\nDiagnosing High Cholesterol\nTreating High Cholesterol",
 
-      temperature=0,
+  temperature=0.7,
 
-      max_tokens=100,
+  max_tokens=256,
 
-      top_p=1.0,
+  top_p=1,
 
-      frequency_penalty=0.0,
+  frequency_penalty=0,
 
-      presence_penalty=0.0
+  presence_penalty=0
 
-      )
+)
 
   return response.choices[0].text
 
